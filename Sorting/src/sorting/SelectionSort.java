@@ -16,44 +16,37 @@ package sorting;
  *The good thing about selection sort is it never makes more than O(n) swaps
  and can be useful when memory write is a costly operation
  * */
-
 public class SelectionSort {
-	
 	public static void selectionSort(int[] arr)
 	{
-		int[] opArr=new int[arr.length];
-		for(int i =0;i<opArr.length;i++)
+		for(int i=0;i<arr.length;i++)
 		{
-			opArr[i]=min(arr);
+			int index =i;
+			for(int j=i+1;j<arr.length;j++)
+			{
+				if(arr[index]>arr[j])
+				{
+					
+					index=j;
+				}
+			}
+			int temp =arr[i];
+			arr[i]=arr[index];
+			arr[index]=temp;
 		}
-		for(int i = 0;i<opArr.length;i++)
-		{
-			System.out.print(opArr[i]+" ");
-		}
+		printArr(arr);
 		
 	}
-	public static int min(int[] arr)
+	public static void printArr(int[] arr)
 	{
-		int min =arr[0];
-		int index=0;
-		for(int i = 0;i<arr.length;i++)
+		for(int i =0;i<arr.length;i++)
 		{
-			if(min>arr[i])
-			{
-				min = arr[i];
-				index=i;
-				
-			}
-			
+			System.out.print(arr[i]+" ");
 		}
-		arr[index]=Integer.MAX_VALUE;
-		return min;
 	}
 	public static void main(String[] args) {
 		int[] ipArr ={64, 25, 12, 22, 11};
 		selectionSort(ipArr);
-		
 	}
 
-	
 }
