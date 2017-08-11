@@ -34,7 +34,7 @@ public class BuildingMaxHeap {
 	}
 	public static void print(int[] arr)
 	{
-		System.out.println("after building heap");
+		//System.out.println("after building heap");
 		for(int i = 0; i <arr.length;i++)
 		{
 			System.out.print(arr[i]+" ");
@@ -43,6 +43,7 @@ public class BuildingMaxHeap {
 
 	public static void main(String[] args) {
 		int ipArr[] ={5,12,64,1,37,90,91,97};
+		/*int ipArr[] ={1,12,9,5,6,10};*/
 		for(int i =(ipArr.length/2)-1;i>=0;i--)
 		{
 			heapify(ipArr,ipArr.length,i);

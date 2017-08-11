@@ -1,5 +1,7 @@
 package submodules;
 
+import java.lang.reflect.Constructor;
+
 public class MergeTwoArrays {
 
 	public static void mergeSort(int[] arr1,int[] arr2)
@@ -26,23 +28,23 @@ public class MergeTwoArrays {
 		}
 		if(i<arr1.length)
 		{
-			/*for(int a=i;a>arr1.length;a++)
+			for(int a=i;a>arr1.length;a++)
 			{	arr3[k]=arr1[a];
-			k++;}*/
+			k++;}
 
 
 			/*OR WE CAN USE ALREADY EXISTING API,, COMPLEXITY =O(n)*/
 
-			System.arraycopy(arr1, i, arr3, k, arr1.length-i);
+			/*System.arraycopy(arr1, i, arr3, k, arr1.length-i);*/
 
 		}
 		if(j<arr2.length)
 		{
-			/*for(int a =j;a<arr2.length;a++)
+			for(int a =j;a<arr2.length;a++)
 			{arr3[k]=arr2[a];
-			k++;}*/
+			k++;}
 			/*OR WE CAN USE ALREADY EXISTING API,,Complexity O(n)  */
-				System.arraycopy(arr2, j, arr3, k, arr2.length-j);
+			/*System.arraycopy(arr2, j, arr3, k, arr2.length-j);*/
 		}
 		print(arr3);
 
@@ -57,8 +59,7 @@ public class MergeTwoArrays {
 		}
 	}
 	public static void main(String[] args) {
-
-
+			
 		int arr1[]={3,6,9,10,15,17};
 		int arr2[]={2,4,8,19,18};
 		mergeSort(arr1, arr2);
